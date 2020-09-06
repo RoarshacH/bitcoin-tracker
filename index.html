@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bitcoin Tracker</title>
+
+</head>
+<body>
+   
+    <h1>Currency Conversion</h1>
+    <form action="/" method="POST" onsubmit="return validateForm()">
+        <input type="text" name="amt">
+        <select name="crypto" id="">
+            <option value="BTC">Bitcoin</option>
+            <option value="ETH">Ethereum</option>
+            <option value="LTC">Litecoin</option>
+        </select>
+
+        <select name="fiat" id="">
+            <option value="USD">US Dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="LKR">Sri Lankan Rupee</option>
+        </select>
+
+        <button type="submit">Confirm</button>
+        <button type="reset">Reset</button>    
+    </form>
+
+    <script>
+        function validateForm(){
+            var x = document.querySelector("input").innerHTML();
+            if (isNaN(x) || x < 1 || x > 10){
+                alert("Must be a number");
+                return false;
+            }
+        }
+  
+    
+    </script>
+    
+</body>
+
+</html>
